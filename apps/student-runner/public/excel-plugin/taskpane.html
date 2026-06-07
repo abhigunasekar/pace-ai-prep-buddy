@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PACE Excel Helper</title>
+    <link rel="stylesheet" href="/excel-plugin/taskpane.css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p>PACE Excel Helper</p>
+        <h1>Butler Lumber</h1>
+      </header>
+
+      <section class="panel">
+        <label>
+          What are you working on?
+          <textarea id="student-question" placeholder="Example: I am not sure whether inventory growth is a source or use."></textarea>
+        </label>
+        <div class="actions">
+          <button id="explain-selection">Explain selected cell</button>
+          <button id="classify-source-use">Classify source/use</button>
+          <button id="check-ccc">Check CCC setup</button>
+          <button id="model-guidance">Modeling guidance</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Guidance</h2>
+        <div id="status">Ready. Select a cell or describe the issue.</div>
+        <pre id="output">This helper gives process guidance only. It will not complete the model for you.</pre>
+      </section>
+    </main>
+    <script src="/excel-plugin/taskpane.js"></script>
+  </body>
+</html>

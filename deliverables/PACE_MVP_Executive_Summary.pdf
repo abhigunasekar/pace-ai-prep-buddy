@@ -1,0 +1,83 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2241 >>
+stream
+BT /F2 22 Tf 54 742 Td (PACE MVP Executive Summary) Tj ET
+BT /F1 10 Tf 54 718 Td (Pilot case: FIN1 Butler Lumber Day 1) Tj ET
+BT /F2 13 Tf 54 682 Td (Problem) Tj ET
+BT /F1 10 Tf 54 664 Td (FIN1 students often struggle to convert case materials, exhibits, tools, and Excel work into a) Tj ET
+BT /F1 10 Tf 54 650 Td (class-ready point of view. Generic AI chat can make this worse by giving polished answers too) Tj ET
+BT /F1 10 Tf 54 636 Td (early. PACE solves a narrower problem: force preparation evidence, scaffold the hard concepts,) Tj ET
+BT /F1 10 Tf 54 622 Td (and surface where students are stuck before class.) Tj ET
+BT /F2 13 Tf 54 595 Td (MVP Features) Tj ET
+BT /F1 9.5 Tf 72 577 Td (- Canvas-style student flow with five gated stages: tools, tutorial, assignment, reflection,) Tj ET
+BT /F1 9.5 Tf 72 563 Td (  and submit.) Tj ET
+BT /F1 9.5 Tf 72 547 Td (- Butler Lumber Day 1 content loaded into the app: tools PDF, Excel template, tutorial checks,) Tj ET
+BT /F1 9.5 Tf 72 533 Td (  and assignment prompts.) Tj ET
+BT /F1 9.5 Tf 72 517 Td (- Excel-required questions ask students to complete the model first, then enter an answer and) Tj ET
+BT /F1 9.5 Tf 72 503 Td (  reasoning.) Tj ET
+BT /F1 9.5 Tf 72 487 Td (- Student report download captures preparation evidence and pre-class reflection.) Tj ET
+BT /F1 9.5 Tf 72 471 Td (- Instructor dashboard shows submissions by hour, average completion time, and most common) Tj ET
+BT /F1 9.5 Tf 72 457 Td (  stuck points.) Tj ET
+BT /F1 9.5 Tf 72 441 Td (- Local Excel taskpane helper gives process guidance for selected cells, sources and uses,) Tj ET
+BT /F1 9.5 Tf 72 427 Td (  cash conversion cycle, and modeling workflow.) Tj ET
+BT /F2 13 Tf 54 403 Td (What Is Working Locally) Tj ET
+BT /F1 9.5 Tf 72 385 Td (- Student App: working local Vite app at http://127.0.0.1:5173/ with gated Butler workflow.) Tj ET
+BT /F1 9.5 Tf 72 369 Td (- Instructor View: working local dashboard backed by browser localStorage and demo-data) Tj ET
+BT /F1 9.5 Tf 72 355 Td (  seeding.) Tj ET
+BT /F1 9.5 Tf 72 339 Td (- Excel Plugin: working taskpane served at /excel-plugin/taskpane.html with Office.js hooks) Tj ET
+BT /F1 9.5 Tf 72 325 Td (  and browser fallback.) Tj ET
+BT /F1 8 Tf 524 36 Td (Page 1) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> /F2 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >> >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1756 >>
+stream
+BT /F2 22 Tf 54 742 Td (PACE MVP Executive Summary) Tj ET
+BT /F1 10 Tf 54 718 Td (Pilot case: FIN1 Butler Lumber Day 1) Tj ET
+BT /F1 9.5 Tf 72 690 Td (- Artifacts: executive summary PDF and Professor Baker feedback email generated in) Tj ET
+BT /F1 9.5 Tf 72 676 Td (  /deliverables.) Tj ET
+BT /F2 13 Tf 54 652 Td (Pending to Scale) Tj ET
+BT /F1 9.5 Tf 72 634 Td (- Replace localStorage with authenticated persistence tied to Canvas roster and assignment) Tj ET
+BT /F1 9.5 Tf 72 620 Td (  IDs.) Tj ET
+BT /F1 9.5 Tf 72 604 Td (- Add a professor authoring workflow for cases, tool PDFs, tutorial videos, rubrics, and Excel) Tj ET
+BT /F1 9.5 Tf 72 590 Td (  template mappings.) Tj ET
+BT /F1 9.5 Tf 72 574 Td (- Connect AI responses to a guarded retrieval layer over approved FIN1 materials and case-) Tj ET
+BT /F1 9.5 Tf 72 560 Td (  specific rubrics.) Tj ET
+BT /F1 9.5 Tf 72 544 Td (- Instrument learning outcomes: completion quality, misconception clusters, class) Tj ET
+BT /F1 9.5 Tf 72 530 Td (  participation, and performance deltas.) Tj ET
+BT /F1 9.5 Tf 72 514 Td (- Harden the Excel add-in for production with HTTPS hosting, Microsoft 365 deployment,) Tj ET
+BT /F1 9.5 Tf 72 500 Td (  telemetry, and cell-level rubric checks.) Tj ET
+BT /F1 9.5 Tf 72 484 Td (- Run a controlled pilot with Professor Baker to validate whether the flow improves) Tj ET
+BT /F1 9.5 Tf 72 470 Td (  preparation without answer leakage.) Tj ET
+BT /F2 13 Tf 54 446 Td (Immediate Ask) Tj ET
+BT /F1 10 Tf 54 428 Td (Use Butler Lumber as a live feedback pilot: review the student flow, identify where the prompts) Tj ET
+BT /F1 10 Tf 54 414 Td (should be stricter or more helpful, and decide which FIN1 case should be the second build-out.) Tj ET
+BT /F1 8 Tf 524 36 Td (Page 2) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000360 00000 n 
+0000002653 00000 n 
+0000002892 00000 n 
+trailer << /Size 7 /Root 1 0 R >>
+startxref
+4700
+%%EOF

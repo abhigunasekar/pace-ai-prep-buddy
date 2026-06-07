@@ -1,0 +1,36 @@
+.DS_Store
+*.log
+*.tmp
+*.bak
+~$*
+
+# Local environment
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated artifacts
+artifacts/
+exports/
+/data/
+dist/
+apps/**/dist/
+*.tsbuildinfo
+*.sqlite
+*.db
+
+# Course material handling
+resources/
+AGENTS.md
+apps/student-runner/public/butler/*.pdf
+apps/student-runner/public/butler/*.xlsx
+resources/**/extracted/
+resources/**/generated/
+resources/**/processed/
