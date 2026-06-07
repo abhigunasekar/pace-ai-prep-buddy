@@ -29,8 +29,6 @@ apps/**/dist/
 # Course material handling
 resources/
 AGENTS.md
-apps/student-runner/public/butler/*.pdf
-apps/student-runner/public/butler/*.xlsx
 resources/**/extracted/
 resources/**/generated/
 resources/**/processed/

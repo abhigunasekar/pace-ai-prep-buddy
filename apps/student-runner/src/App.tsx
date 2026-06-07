@@ -355,7 +355,7 @@ function StudentView() {
               >
                 <FileSpreadsheet size={16} /> Open Excel template
               </button>
-              <a className="secondary" href="/excel-plugin/taskpane.html" target="_blank" rel="noreferrer">
+              <a className="secondary" href={butlerCase.excelHelper} target="_blank" rel="noreferrer">
                 <GraduationCap size={16} /> Open Excel helper
               </a>
             </div>

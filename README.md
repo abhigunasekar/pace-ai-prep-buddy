@@ -4,6 +4,14 @@ PACE stands for Prepare, Analyze, Construct, Explain.
 
 PACE is an AI preparation buddy for HBS case learning. It helps students understand course materials, reason through assumptions, and build finance intuition without generating final answers or complete models for them.
 
+## One-Click Demo
+
+Open the Butler Lumber prototype here:
+
+https://abhigunasekar.github.io/pace-ai-prep-buddy/
+
+The public demo uses placeholder course files so the workflow can be reviewed without redistributing FIN1 materials. In a private Canvas pilot, those placeholders would be replaced with authorized case PDFs and Excel templates.
+
 ## Core Principle
 
 PACE should scaffold learning, not replace thinking.

@@ -1,103 +1,77 @@
-# PACE Butler Lumber Prototype Instructions
+# PACE Butler Lumber Prototype
 
 Professor Baker,
 
-This repository contains a local MVP of PACE, an AI-enabled preparation tool for FIN1 case learning. The current pilot is built around Butler Lumber Day 1.
+The easiest way to review the prototype is to open the web demo:
 
-GitHub repository:
+```text
+https://abhigunasekar.github.io/pace-ai-prep-buddy/
+```
+
+No installation, terminal, GitHub checkout, or technical setup is required.
+
+The source repository is here if you want it later:
 
 ```text
 https://github.com/abhigunasekar/pace-ai-prep-buddy
 ```
 
-## What the Prototype Does
+## What to Try
 
-PACE is designed to improve case preparation without replacing student thinking.
+### 1. Student View
 
-The student flow is gated:
+Open the demo link and stay on **Student**.
 
-1. **Tools**: student reviews the relevant Butler tools and identifies the most important tool.
-2. **Tutorials**: student answers concept checks after a placeholder tutorial video.
-3. **Assignment**: student answers the Butler assignment questions. Excel-required questions ask the student to complete the Excel work first, then enter an answer and reasoning.
-4. **Reflection**: student records one pre-class takeaway.
-5. **Submit**: student submits locally and can download an activity report.
+Try moving through the five stages:
 
-The instructor view shows:
+1. **Tools**: review the tools section and enter a short takeaway.
+2. **Tutorial**: answer the three concept checks.
+3. **Assignment**: answer the Butler assignment questions. For Excel-required questions, check the box confirming Excel work and enter reasoning.
+4. **Reflection**: enter one main takeaway before class.
+5. **Submit**: enter a name and submit.
 
-1. Submissions by hour.
-2. Average time to completion.
-3. Questions where students reported getting stuck.
+The key design point is that students cannot advance until they have done visible preparation work.
 
-The Excel helper is a local Office taskpane prototype. It provides process guidance for:
+### 2. Instructor View
 
-- selected-cell context,
-- sources and uses logic,
-- cash conversion cycle setup,
-- modeling workflow.
+Use the top toggle to switch from **Student** to **Instructor**.
 
-It intentionally does not complete the Butler model for the student.
+Then click **Seed demo data**.
 
-## How to Run Locally
+You will see:
 
-Prerequisites:
+1. submissions by hour,
+2. average completion time,
+3. questions where students reported getting stuck,
+4. recent student reflections.
 
-- Node.js installed.
-- Access to the Butler Day 1 tools PDF and Excel template.
+### 3. Excel Helper Preview
 
-From the repository root:
+In the Assignment stage, click **Open Excel helper**.
 
-```bash
-npm install
-npm run dev
-```
+This opens the prototype helper that would eventually sit inside Excel. In the browser version, it shows the intended guidance flow:
 
-Open:
+- explain selected cell,
+- classify source/use logic,
+- check cash conversion cycle setup,
+- give modeling guidance.
 
-```text
-http://127.0.0.1:5173/
-```
+It intentionally gives process guidance rather than completing the model.
 
-## Local Butler Files
+## Important Note on Course Files
 
-For public-source-control reasons, the raw Butler course files are not included in the GitHub repository.
+Because this is a public web demo, the original Butler course PDF and Excel template are not included. The demo uses public-safe placeholder files so the workflow is easy to test without redistributing course materials.
 
-To run the full Butler prototype locally, place these files here:
+In a private Canvas pilot, those placeholders would be replaced with the authorized Butler tools PDF and Excel workbook.
 
-```text
-apps/student-runner/public/butler/Butler_Day_1_Tools.pdf
-apps/student-runner/public/butler/Butler_Lumber_Day_1_Template.xlsx
-```
+## Feedback That Would Be Most Useful
 
-The app will then show the tools PDF and allow the Excel template download.
+1. Does this staged flow match how you want students to prepare before class?
+2. Where should the tutor be more helpful versus more restrictive?
+3. Which Butler questions should trigger Excel work versus conceptual reasoning?
+4. What would you want to see on the instructor dashboard before class?
+5. What would be required to pilot this on one real FIN1 assignment?
 
-## Instructor Dashboard
+## Optional Technical Appendix
 
-In the app, use the top toggle to switch from **Student** to **Instructor**.
-
-The dashboard reads local prototype submissions from the browser. If there are no submissions yet, click **Seed demo data** to preview the charts.
-
-## Excel Helper
-
-The taskpane prototype is served at:
-
-```text
-http://127.0.0.1:5173/excel-plugin/taskpane.html
-```
-
-The Excel manifest is:
-
-```text
-apps/excel-plugin/manifest.xml
-```
-
-For a local demo, start the dev server, then sideload the manifest in Excel. The current add-in is a prototype and should be treated as a local demonstration, not a production Microsoft 365 deployment.
-
-## Suggested Feedback Questions
-
-The most useful feedback would be on:
-
-1. Whether the staged student flow matches the way FIN1 students should prepare.
-2. Which Butler questions need stricter guidance, better hints, or different evidence requirements.
-3. Which instructor metrics would be most valuable before class.
-4. Whether the Excel helper should focus more on formulas, conceptual interpretation, or diagnosing common modeling mistakes.
-5. What would be required to pilot this with one real FIN1 assignment.
+The app can also be run locally from the GitHub repository, but this is only necessary for development. The web demo above is the intended review path.

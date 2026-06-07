@@ -11,8 +11,9 @@ export const stages: Array<{ id: StageId; label: string; short: string }> = [
 export const butlerCase = {
   title: "Butler Lumber Day 1",
   course: "FIN1",
-  toolsPdf: "/butler/Butler_Day_1_Tools.pdf",
-  excelTemplate: "/butler/Butler_Lumber_Day_1_Template.xlsx",
+  toolsPdf: `${import.meta.env.BASE_URL}butler/Butler_Day_1_Tools.pdf`,
+  excelTemplate: `${import.meta.env.BASE_URL}butler/Butler_Lumber_Day_1_Template.xlsx`,
+  excelHelper: `${import.meta.env.BASE_URL}excel-plugin/taskpane.html`,
   context:
     "Butler Lumber is profitable and growing, yet needs more bank financing. The preparation task is to connect operating performance, working-capital investment, sources and uses, and lender risk.",
 };
