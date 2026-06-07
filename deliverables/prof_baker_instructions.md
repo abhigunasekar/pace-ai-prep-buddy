@@ -4,6 +4,12 @@ Professor Baker,
 
 This repository contains a local MVP of PACE, an AI-enabled preparation tool for FIN1 case learning. The current pilot is built around Butler Lumber Day 1.
 
+GitHub repository:
+
+```text
+https://github.com/abhigunasekar/pace-ai-prep-buddy
+```
+
 ## What the Prototype Does
 
 PACE is designed to improve case preparation without replacing student thinking.
