@@ -9,7 +9,8 @@
     "dev": "npm --workspace apps/student-runner run dev",
     "build": "npm --workspace apps/student-runner run build",
     "preview": "npm --workspace apps/student-runner run preview",
-    "synthesize:reports": "node scripts/synthesize-reports.mjs"
+    "synthesize:reports": "node scripts/synthesize-reports.mjs",
+    "estimate:tokens": "node scripts/estimate-token-budget.mjs"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

@@ -1,4 +1,35 @@
+import butlerCaseConfig from "../cases/butler-lumber-day-1.json";
+
 export type StageId = "tools" | "tutorial" | "assignment" | "reflection" | "submit";
+
+export type TutorialQuestion = {
+  id: string;
+  title: string;
+  prompt: string;
+};
+
+export type AssignmentQuestion = {
+  id: string;
+  title: string;
+  prompt: string;
+  requiresExcel: boolean;
+  excelInstruction: string;
+};
+
+export type PaceCaseConfig = {
+  id: string;
+  title: string;
+  course: string;
+  assetBasePath: string;
+  toolsPdf: string;
+  excelTemplate: string;
+  context: string;
+  toolChecklist: string[];
+  tutorialQuestions: TutorialQuestion[];
+  assignmentQuestions: AssignmentQuestion[];
+  stuckOptions: string[];
+  reflectionPrompt: string;
+};
 
 export const stages: Array<{ id: StageId; label: string; short: string }> = [
   { id: "tools", label: "Tools", short: "Tools" },
@@ -8,92 +39,21 @@ export const stages: Array<{ id: StageId; label: string; short: string }> = [
   { id: "submit", label: "Submit", short: "Submit" },
 ];
 
+const config = butlerCaseConfig as PaceCaseConfig;
+const base = `${import.meta.env.BASE_URL}${config.assetBasePath}/`;
+
+export const activeCase = config;
+
 export const butlerCase = {
-  title: "Butler Lumber Day 1",
-  course: "FIN1",
-  toolsPdf: `${import.meta.env.BASE_URL}butler/Butler_Day_1_Tools.pdf`,
-  excelTemplate: `${import.meta.env.BASE_URL}butler/Butler_Lumber_Day_1_Template.xlsx`,
+  title: config.title,
+  course: config.course,
+  toolsPdf: `${base}${config.toolsPdf}`,
+  excelTemplate: `${base}${config.excelTemplate}`,
   excelHelper: `${import.meta.env.BASE_URL}excel-plugin/taskpane.html`,
-  context:
-    "Butler Lumber is profitable and growing, yet needs more bank financing. The preparation task is to connect operating performance, working-capital investment, sources and uses, and lender risk.",
+  context: config.context,
 };
 
-export const toolChecklist = [
-  "Financial-statement trend analysis: sales, COGS, expenses, margins, ROA, ROE.",
-  "Sources and uses of funds: asset increases are uses; liability and equity increases are sources.",
-  "Cash conversion cycle: receivable days plus inventory days minus payable days.",
-  "Working-capital financing logic: profitable growth can consume cash before customers pay.",
-  "Banker recommendation: size the borrowing need, identify risks, and propose lending conditions.",
-];
-
-export const tutorialQuestions = [
-  {
-    id: "tutorial-source-use",
-    title: "Sources and Uses",
-    prompt:
-      "Inventory rises by $100 and accounts payable rises by $40. Is the net effect a source or use of funds? Explain the intuition first.",
-  },
-  {
-    id: "tutorial-ccc",
-    title: "Cash Conversion Cycle",
-    prompt:
-      "Why can Butler be profitable and still need to borrow more as receivables and inventory grow?",
-  },
-  {
-    id: "tutorial-lender",
-    title: "Lender Lens",
-    prompt:
-      "What evidence would make a banker more comfortable extending Butler's credit line?",
-  },
-];
-
-export const assignmentQuestions = [
-  {
-    id: "q1-performance",
-    title: "Performance",
-    prompt: "How well is Butler Lumber performing?",
-    requiresExcel: true,
-    excelInstruction:
-      "Use the Excel template to calculate growth, margins, returns, and any trend that changes your view of operating quality.",
-  },
-  {
-    id: "q2-strategy",
-    title: "Financial Strategy",
-    prompt: "What has been Mr. Butler's financial strategy?",
-    requiresExcel: false,
-    excelInstruction:
-      "Anchor your answer in how the balance sheet and borrowing changed over time.",
-  },
-  {
-    id: "q3-sources-uses",
-    title: "Sources and Uses",
-    prompt: "What have been Butler Lumber's sources and uses of funds over the period from 1988 to 1990?",
-    requiresExcel: true,
-    excelInstruction:
-      "Complete the sources-and-uses section in Excel, then describe the largest uses and sources in plain English.",
-  },
-  {
-    id: "q4-borrowing",
-    title: "Borrowing Need",
-    prompt: "Why does Mr. Butler have to borrow so much money to support this profitable business?",
-    requiresExcel: true,
-    excelInstruction:
-      "Use working-capital growth and cash-cycle evidence to explain the gap between profit and cash.",
-  },
-  {
-    id: "q5-ccc",
-    title: "Cash Conversion Cycle",
-    prompt: "Has he been managing his company's cash conversion cycle wisely?",
-    requiresExcel: true,
-    excelInstruction:
-      "Calculate receivable days, inventory days, payable days, and the cash conversion cycle, then interpret the movement.",
-  },
-];
-
-export const stuckOptions = [
-  "Source/use sign logic",
-  "Excel formula setup",
-  "Finding the right exhibit evidence",
-  "Interpreting what the number means",
-  "Translating analysis into a recommendation",
-];
+export const toolChecklist = config.toolChecklist;
+export const tutorialQuestions = config.tutorialQuestions;
+export const assignmentQuestions = config.assignmentQuestions;
+export const stuckOptions = config.stuckOptions;
